@@ -7,16 +7,17 @@ public class Bob {
         System.out.println("please ask him a questions: ");
         String userQuestion = scan.nextLine();
 
-        String endsWithMark = userQuestion + "?";
-        System.out.println("Sure!");
+        if(userQuestion.endsWith("?")){
+             System.out.println("Sure!");
+        }
 
-        String endsWithExclamation = userQuestion + "!";
-        System.out.println("Whoa, chill out!");
-
-
-
-
-
-
+        else if(userQuestion.endsWith("!")){
+            System.out.println("Whoa, chill out!");
+        }
+        else if(userQuestion.endsWith("")){
+             System.out.println("Fine.Be that way!");
+        }else {
+             System.out.println("Whatever");
+         }
     }
 }
