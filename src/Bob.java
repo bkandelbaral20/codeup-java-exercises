@@ -1,23 +1,41 @@
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class Bob {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("please ask him a questions: ");
-        String userQuestion = scan.nextLine();
+        Scanner sc = new Scanner(System.in);
+        boolean again = true; // should we continue or not?
+        do {
+            System.out.print("ASk question to Bob: ");
+            String userInput = sc.nextLine(); // either a string, or empty string
 
-        if(userQuestion.endsWith("?")){
-             System.out.println("Sure!");
-        }
+            if (userInput.isEmpty()) {
+                System.out.println("Fine, be that way.");
+            } else {
+                char lastChar = userInput.charAt(userInput.length() - 1); // last character
+                switch (lastChar) {
+                    case '?':
+                        System.out.println("Sure");
+                        break;
+                    case '!':
+                        System.out.println("Whoa, chill out!");
+                        break;
+                    default:
+                        System.out.println("Whatever");
+                        break;
+                }
 
-        else if(userQuestion.endsWith("!")){
-            System.out.println("Whoa, chill out!");
-        }
-        else if(userQuestion.endsWith("")){
-             System.out.println("Fine.Be that way!");
-        }else {
-             System.out.println("Whatever");
-         }
+                // ask the user if they would like to continue
+                System.out.print("DM Bob again? [y/N]: ");
+                String response = sc.nextLine();
+                if (!response.trim().equalsIgnoreCase("y")) {
+                    again = false;
+                }
+            }
+
+        } while (again);
+
+        // user has clicked something other than y/Y, so exit with a message
+        System.out.println("wrong place");
     }
 }
