@@ -1,10 +1,11 @@
 
 public class MethodsExercises {
     public static void main(String[] args) {
-        System.out.println(Addition(3, 4));
-        System.out.println(Subtraction(5, 2));
-        System.out.println(Multiplication(5, 7));
-        System.out.println(Division(50, 2));
+        System.out.println("The addition of 3 + 4 is : " + Addition(3, 4));
+        System.out.println("The subtraction of 5 - 2 is : " + Subtraction(5, 2));
+        System.out.println("The Multiplication of 5 *  7 is : " + Multiplication(5, 7));
+        System.out.println("The division of 50 by 2 is : " + Division(50, 2));
+        System.out.println("The modulus  of 11 by 4 is : " + Modulus(11, 2));
 
     }
 
@@ -24,6 +25,10 @@ public class MethodsExercises {
     //Division method
     public static double Division(double x, double y) {
         return x/ y;
+    }
+    //Modulus method
+    public static double Modulus(double x, double y) {
+        return x % y;
     }
 
 }
