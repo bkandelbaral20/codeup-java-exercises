@@ -9,8 +9,8 @@ public class MethodsExercises {
 //        System.out.println("The division of 50 by 2 is : " + Division(50, 2));
 //        System.out.println("The modulus  of 11 by 4 is : " + Modulus(11, 2));
         // getInteger(2,6);
-        //System.out.println(factorialNumber(3));
-        System.out.println(MultiplicationRecursively(5,3));
+        System.out.println(factorialNumber(3));
+       // System.out.println(MultiplicationRecursively(5,3));
     }
 
     //Addition method
@@ -32,16 +32,16 @@ public class MethodsExercises {
 //        return result;
 //    }
 
-    public static int  MultiplicationRecursively (int a, int b){
-        int product = 0;
-        if(a>0){
-            product =  (b + MultiplicationRecursively(a-1,b));
-        }else if ( a<0){
-            product = (0-b) + MultiplicationRecursively(a+1,b);
-        }
-        return product;
-
-    }
+//    public static int  MultiplicationRecursively (int a, int b){
+//        int product = 0;
+//        if(a>0){
+//            product =  (b + MultiplicationRecursively(a-1,b));
+//        }else if ( a<0){
+//            product = (0-b) + MultiplicationRecursively(a+1,b);
+//        }
+//        return product;
+//
+//    }
 //    //Division method
 //    public static double Division(double x, double y) {
 //        return x/ y;
@@ -53,7 +53,9 @@ public class MethodsExercises {
 
     //Create a method that validates that user input is in a certain range
 //    public static int getInteger(int min, int max) {
-    Scanner sc = new Scanner(System.in);
+//        boolean goAgain = true;
+//        int num = 0;
+//    Scanner sc = new Scanner(System.in);
 //            System.out.print("Enter a number between 1 and 10 to find maximum of two: ");
 //            int x = sc.nextInt();
 //            int y = sc.nextInt();
@@ -80,21 +82,17 @@ public class MethodsExercises {
 //    Continue only if the user agrees to.
 //    A factorial is a number multiplied by each of the numbers before it.
 
-//    public static long factorialNumber(long x) {
-//        System.out.print("Enter a number between 1 and 10 : ");
-//        Scanner scan = new Scanner(System.in);
-//        long input = scan.nextLong();
-//        if (input > 0) {
-//            for (int i = 1; i < input; i++) {
-//                System.out.println(i);
-//                input = input * i;
-//                return input;
-//            }
-//        } else {
-//            return 1;
-//        }
-//        return 0;
-   // }
+    public static long factorialNumber(int num) {
+        System.out.print("Enter a number between 1 and 10 : ");
+        int factorial = 1;
+        int previousFactorial =1;
+        Scanner scan = new Scanner(System.in);
+        int input = scan.nextInt();
+            for (int i = 1; i <= input; ++i) {
+                input = input * i;
+            }
+                return factorial;
+    }
 
 //    Create an application that simulates dice rolling.
 //    Ask the user to enter the number of sides for a pair of dice.
