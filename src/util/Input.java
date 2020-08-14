@@ -74,7 +74,7 @@ public class Input {
 
     //double getDouble()
     public double getDouble() {
-        System.out.println("Please enter the double type of another number here:");
+        System.out.println("Please enter the double type of number here:");
         double num = 0;
         num = scan.nextDouble();
         return num;
