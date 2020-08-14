@@ -1,11 +1,15 @@
 
 public class Person {
+
+    //instance variable
     private String name;
 
+    //setting name using constructor
     public Person(String name) {
         this.name = name;
     }
 
+    //main method
     public static void main(String[] args) {
         Person per = new Person();
         per.name = "Rama";
@@ -36,7 +40,7 @@ public class Person {
 
     public void setName(String name) {
 //TODO: change the name property to the passed value
-        this.name = name;
+       this.name = name;
     }
 
     public void sayHello() {
@@ -45,6 +49,6 @@ public class Person {
     }
 
     //default constructor
-    public Person (){
+    public Person() {
     }
 }

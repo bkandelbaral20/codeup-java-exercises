@@ -3,25 +3,28 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scan;
+
+    //creating class level variable or instance variable
+    private Scanner scanner;
 
     //creating constructor of an class
+    //this refers to class level object(parent object)
     public Input() {
-        this.scan = new Scanner(System.in);
+        this.scanner = new Scanner(System.in);
     }
 
     //creating String get String() method
     public String getString() {
         String userInput = "";
         System.out.println("please type here: ");
-         userInput = scan.next();
+        userInput = scanner.nextLine();
         return userInput;
     }
 
     //boolean yesNo() method
     public boolean yesNo() {
-        System.out.println("Please enter the boolean value here:");
-        String userInput1 = scan.next();
+        System.out.println("Please enter the Yes or No here:");
+        String userInput1 = scanner.next();
         if (userInput1.equalsIgnoreCase("yes") || userInput1.equalsIgnoreCase("y")) {
             return true;
         } else {
@@ -36,7 +39,7 @@ public class Input {
         boolean doAgain = true;
         int num = 0;
         do {
-            num = scan.nextInt();
+            num = scanner.nextInt();
             if (num < min || num > max) {
                 System.out.printf("\nThe integer %d is out of range\n", num);
                 System.out.printf("Enter an integer between %d and %d: ", min, max);
@@ -51,8 +54,7 @@ public class Input {
     //int getInt()
     public int getInt() {
         System.out.println("Please enter another int number here:");
-        int num = 0;
-        num = scan.nextInt();
+       int  num = scanner.nextInt();
         return num;
     }
 
@@ -61,10 +63,10 @@ public class Input {
         boolean doAgain = true;
         double num = 0;
         do {
-            num = scan.nextDouble();
+            num = scanner.nextDouble();
             if (num < min || num > max) {
-                System.out.printf("\nThe integer %d is out of range\n", num);
-                System.out.printf("Enter an integer between %d and %d: ", min, max);
+                System.out.printf("\nThe number %.3f is out of range\n", num);
+                System.out.printf("Enter an double number between %.1f and %.1f : ", min, max);
             } else {
                 doAgain = false; // they did enter a number within range, so break while
             }
@@ -76,7 +78,7 @@ public class Input {
     public double getDouble() {
         System.out.println("Please enter the double type of number here:");
         double num = 0;
-        num = scan.nextDouble();
+        num = scanner.nextDouble();
         return num;
     }
 }
