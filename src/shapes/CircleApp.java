@@ -1,14 +1,22 @@
 package shapes;
+
 import util.Input;
+
 public class CircleApp {
     public static void main(String[] args) {
+
+        //using this instance of an object from input class
+        //using this getDouble method from input class too
 
         Input input = new Input();
         double radius = input.getDouble();
 
-         Circle circle = new Circle(radius);
-        System.out.println("The radius of an circle is : " + circle.getRadius());
-        System.out.println("The Area of an circle is : " + circle.getArea());
-        System.out.println("The circumference of an circle is : " + circle.getCircumference());
+        //Create an instance of an object for the circle class
+        Circle circle = new Circle(radius);
+
+        //running all the methods from Circle class
+        System.out.println("The radius of an circle is : " + circle.getRadius() + " cm");
+        System.out.printf("The Area of an circle is : %.3f cm" , circle.getArea() );
+        System.out.printf(" \n The circumference of an circle is : %.3f cm" , circle.getCircumference());
     }
 }
