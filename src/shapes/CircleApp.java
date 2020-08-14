@@ -17,6 +17,6 @@ public class CircleApp {
         //running all the methods from Circle class
         System.out.println("The radius of an circle is : " + circle.getRadius() + " cm");
         System.out.printf("The Area of an circle is : %.3f cm" , circle.getArea() );
-        System.out.printf(" \n The circumference of an circle is : %.3f cm" , circle.getCircumference());
+        System.out.printf("\nThe circumference of an circle is : %f cm" , circle.getCircumference());
     }
 }
