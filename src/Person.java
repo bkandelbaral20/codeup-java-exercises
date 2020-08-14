@@ -44,6 +44,7 @@ public class Person {
         System.out.println("hello " + name);
     }
 
+    //default constructor
     public Person (){
     }
 }
