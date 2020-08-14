@@ -7,17 +7,20 @@ public class Input {
 
     //creating constructor of an class
     public Input() {
-        Scanner scan = new Scanner(System.in);
+        this.scan = new Scanner(System.in);
     }
 
     //creating String get String() method
     public String getString() {
-        String userInput = scan.next();
+        String userInput = "";
+        System.out.println("please type here: ");
+         userInput = scan.next();
         return userInput;
     }
 
     //boolean yesNo() method
     public boolean yesNo() {
+        System.out.println("Please enter the boolean value here:");
         String userInput1 = scan.next();
         if (userInput1.equalsIgnoreCase("yes") || userInput1.equalsIgnoreCase("y")) {
             return true;
@@ -29,6 +32,7 @@ public class Input {
     //int getInt(int min, int max) method
     public int getInt(int min, int max) {
         // i.e. see if number is between 1 and 10
+        System.out.println("please enter a int number here between 1 - 10 :");
         boolean doAgain = true;
         int num = 0;
         do {
@@ -46,12 +50,14 @@ public class Input {
 
     //int getInt()
     public int getInt() {
+        System.out.println("Please enter another int number here:");
         int num = 0;
         num = scan.nextInt();
         return num;
     }
 
     public double getDouble(double min, double max) {
+        System.out.println("Please enter a double type of number here range from 1-10:");
         boolean doAgain = true;
         double num = 0;
         do {
@@ -68,6 +74,7 @@ public class Input {
 
     //double getDouble()
     public double getDouble() {
+        System.out.println("Please enter the double type of another number here:");
         double num = 0;
         num = scan.nextDouble();
         return num;

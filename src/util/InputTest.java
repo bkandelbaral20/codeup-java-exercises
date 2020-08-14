@@ -5,12 +5,12 @@ public class InputTest {
         //creating new instance of object for testing all the methods from input
         Input input = new Input();
 
-        //calling all the methods from input class
-        input.getString();
-        input.yesNo();
-        input.getInt();
-        input.getInt();
-        input.getDouble();
-        input.getDouble();
+        // calling all the methods from input class
+        System.out.println("The string is : " + input.getString());
+        System.out.println("The boolean is " + input.yesNo());
+        System.out.println("The integer is : " + input.getInt(1, 10));
+        System.out.println("The single integer is : " + input.getInt());
+        System.out.println("The numbers are : " + input.getDouble(1, 10));
+        System.out.println("The number is: " + input.getDouble());
     }
 }
