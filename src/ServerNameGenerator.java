@@ -14,6 +14,10 @@ public class ServerNameGenerator {
 //    Create a method that will return a random element from an array of strings.
         //instance of random class
         Random rand = new Random();
+        int index = rand.nextInt(adjectives.length);
+        int index2 = rand.nextInt(nouns.length);
+        System.out.println("The random number is : "+adjectives[index]);
+        System.out.println("The random number is : "+nouns[index]);
 
 //    Add a main method, and inside of your main method select and random noun and adjective and hyphenate the combination
 //    and display the generated name to the user.
