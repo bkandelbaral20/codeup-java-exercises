@@ -11,14 +11,16 @@ public class ServerNameGenerator {
         System.out.println(Arrays.toString(nouns));
 
 //    Create a method that will return a random element from an array of strings.
-        //instance of random class
-        Random rand = new Random();
-        int index = rand.nextInt(adjectives.length);
-        int index2 = rand.nextInt(nouns.length);
-        System.out.println("Here is your server name  : \n"+adjectives[index]);
-        System.out.println("The random number is : \n"+nouns[index]);
+
+            System.out.println("Here is your server name :");
+           ServerNameGenerator sng = new ServerNameGenerator();
 
 //    Add a main method, and inside of your main method select and random noun and adjective and hyphenate the combination
 //    and display the generated name to the user.
     }
+    public static String randomWord(String[] inputWords){
+        int length = inputWords. length;
+        int randomNum = (int) (Math.random() * inputWords.length);
+        return inputWords[randomNum];
+}
 }

@@ -13,9 +13,16 @@ public class Movie {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     //getter and setter for category
     public String getCategory() {
         return category;
+    }
+    public void  setCategory(String category) {
+       this.category = category;
     }
 
     public Movie(String name, String category){
