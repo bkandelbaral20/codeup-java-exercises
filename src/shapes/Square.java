@@ -1,6 +1,6 @@
 package shapes;
 
-public class Square extends Rectangle {
+public abstract class Square extends Quadrilateral {
 
 //    1.previous exercises
 //    public int sides;
@@ -19,5 +19,13 @@ public class Square extends Rectangle {
 //    public double getPerimeter(int sides){
 //        return  4 * sides;
 //    }
+
+    protected int side;
+    public Square(int side) {
+        this.width = side;
+        this.length = side;
+        this.side = side;
+    }
+
 
 }
