@@ -7,11 +7,8 @@ public class Rectangle {
     protected double width;
 
     //default constructor
-    public Rectangle() {
+    public Rectangle(double length, int sides) {
     }
-
-    //instance of an object
-    Rectangle rec = new Rectangle();
 
     //using getter and setter method for length and width
     public double getLength() {
