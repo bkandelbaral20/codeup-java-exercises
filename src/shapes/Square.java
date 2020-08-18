@@ -4,18 +4,9 @@ public class Square extends Rectangle {
 
     public int sides;
 
-    //using getter and setter method for sides
-//    public int getSides() {
-//        return sides;
-//    }
-//
-//    public void setSides(int sides) {
-//        this.sides = sides;
-//    }
-
     //creating method for square
-    public Square(double length, double width,int sides){
-        super(length, width);
+    public Square(int sides){
+        super(sides, sides);
         this.sides = sides;
     }
 
