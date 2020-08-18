@@ -20,20 +20,36 @@ public class Square extends Quadrilateral {
 //        return  4 * sides;
 //    }
 
-    protected int side;
-    public Square(int side) {
+    protected double side;
+    public Square(double side) {
         this.width = side;
         this.length = side;
         this.side = side;
     }
+
+    public void setSide(double side) {
+        this.width = side;
+        this.length = side;
+    }
+
+    @Override
+    public void setLength(double length) {
+        this.setSide(length);
+    }
+
+    @Override
+    public void setWidth(double width) {
+        this.setSide(width);
+    }
+
     @Override
     public double getPerimeter() {
-        return 4*(side);
+        return 4*(length);
     }
 
     @Override
     public double getArea() {
-        return Math.pow(side,2);
+        return length * length;
     }
 
 
