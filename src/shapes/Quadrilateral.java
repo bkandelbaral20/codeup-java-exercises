@@ -30,18 +30,15 @@ abstract class Quadrilateral extends Shape implements Measurable {
     public void setWidth(double width) {
         this.width = width;
     }
-
-    public static void main(String[] args) {
-        Quadrilateral qua = new Quadrilateral() {
-            @Override
-            public double getPerimeter() {
-                return 0;
-            }
-
-            @Override
-            public double getArea() {
-                return 0;
-            }
-        };
-    }
+//        Quadrilateral qua = new Quadrilateral() {
+//            @Override
+//            public double getPerimeter() {
+//                return 0;
+//            }
+//
+//            @Override
+//            public double getArea() {
+//                return 0;
+//            }
+//        };
 }
