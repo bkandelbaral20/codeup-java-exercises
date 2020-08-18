@@ -14,9 +14,18 @@ public class Square extends Rectangle {
 //    }
 
     //creating method for square
-    public Square(int sides,double length, double width){
+    public Square(double length, double width,int sides){
         super(length, width);
         this.sides = sides;
+    }
+
+    //getArea and get method overriding
+    public double getArea(int sides){
+        return Math.pow(sides,2) ;
+    }
+    //create getPerimeter method
+    public double getPerimeter(int sides){
+        return  4 * sides;
     }
 
 }

@@ -7,25 +7,25 @@ public class Rectangle {
     protected double width;
 
     //default constructor
-    public Rectangle(double length, int sides) {
+    public Rectangle(double length, int width) {
     }
 
     //using getter and setter method for length and width
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
+//    public double getLength() {
+//        return length;
+//    }
+//
+//    public void setLength(double length) {
+//        this.length = length;
+//    }
+//
+//    public double getWidth() {
+//        return width;
+//    }
+//
+//    public void setWidth(double width) {
+//        this.width = width;
+//    }
 
     //rectangle method for length and width
     public Rectangle(double length, double width) {
