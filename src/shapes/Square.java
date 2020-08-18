@@ -1,6 +1,6 @@
 package shapes;
 
-public abstract class Square extends Quadrilateral {
+public class Square extends Quadrilateral {
 
 //    1.previous exercises
 //    public int sides;
@@ -26,6 +26,16 @@ public abstract class Square extends Quadrilateral {
         this.length = side;
         this.side = side;
     }
+    @Override
+    public double getPerimeter() {
+        return 4*(side);
+    }
+
+    @Override
+    public double getArea() {
+        return Math.pow(side,2);
+    }
+
 
 
 }
