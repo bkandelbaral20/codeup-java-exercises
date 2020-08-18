@@ -15,7 +15,7 @@ public class ShapesTest {
 //        System.out.println("The area of box2 is : " + box2.getArea(5) + " cm");
 
 //        Rectangle myShape = new Rectangle();
-        Measurable myShape = new Measurable() {
+        Measurable myShape = new Rectangle() {
             @Override
             public double getPerimeter() {
                 return 0;
