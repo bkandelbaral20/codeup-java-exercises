@@ -1,41 +1,102 @@
 package movies;
 import util.Input;
-
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class MoviesApplication {
-    public static void main(String[] args) {
 
-        System.out.println("What would you like to do ?");
-        System.out.println("0 - exit");
-        System.out.println("1 - view all movies");
-        System.out.println("2 - view movies in the animated category");
-        System.out.println("3 - view movies in the drama category");
-        System.out.println("4 - view movies in the horror category");
-        System.out.println("5 - view movies in the scifi category \n");
-
-        System.out.println("Enter your choice :");
-        Scanner scanner = new Scanner(System.in);
-        Movie[] movies= MoviesArray.findAll();
-        int userInput = scanner.nextInt();
-        System.out.println("You entered :" + userInput);
-
-            if (userInput == 0) {
-                System.out.println("exist");
-            } else if (userInput == 1) {
-                System.out.println("view all the movies");
-            } else if (userInput == 2) {
-                System.out.println("view movies in the animated category");
-            } else if (userInput == 3) {
-                System.out.println("view movies in the drama category");
-            } else if (userInput == 4) {
-                System.out.println("view movies in the horror category");
-            } else if (userInput == 5) {
-                System.out.println("view movies in the scifi category");
-            } else {
-                System.out.println(userInput);
+    public static void movieApp() {
+        boolean willRun = true;
+        Movie[] movieArray = MoviesArray.findAll();
+        Input input = new Input();
+        while (willRun){
+            System.out.println("Please make your selection");
+            System.out.println("0 - Exit");
+            System.out.println("1 - See all movies");
+            System.out.println("2 - See all musical movies");
+            System.out.println("3 - See all drama movies");
+            System.out.println("4 - See all horror movies");
+            System.out.println("5 - See all sci-fi movies");
+            System.out.println("6 - Add movie to list");
+            int num = input.getInt(0, 6);
+            switch (num) {
+                case (0):
+                    System.out.println("Are you sure you want to quit?");
+                    input.clear();
+                    boolean confirm = input.yesNo();
+                    if (confirm) {
+                        System.out.println("Closing program...");
+                        willRun = false;
+                        break;
+                    } else {
+                        System.out.println("Restarting...");
+                        break;
+                    }
+                case (1):
+                    for (Movie movie : movieArray) {
+                        System.out.println(movie.getName() + " --- " + movie.getCategory());
+                    }
+                    break;
+                case (2):
+                    for (Movie movie : movieArray) {
+                        if (movie.getCategory().equals("musical")) {
+                            System.out.println(movie.getName() + " --- " + movie.getCategory());
+                        }
+                    }
+                    break;
+                case (3):
+                    for (Movie movie : movieArray) {
+                        if (movie.getCategory().equals("drama")) {
+                            System.out.println(movie.getName() + " --- " + movie.getCategory());
+                        }
+                    }
+                    break;
+                case (4):
+                    for (Movie movie : movieArray) {
+                        if (movie.getCategory().equals("horror")) {
+                            System.out.println(movie.getName() + " --- " + movie.getCategory());
+                        }
+                    }
+                    break;
+                case (5):
+                    for (Movie movie : movieArray) {
+                        if (movie.getCategory().equals("scifi")) {
+                            System.out.println(movie.getName() + " --- " + movie.getCategory());
+                        }
+                    }
+                    break;
+                case(6):
+                    input.clear();
+                    System.out.println("Input movie title...");
+                    String title = input.getString();
+                    System.out.println("Input movie genre");
+                    String genre = input.getString().toLowerCase();
+                    Movie addMe = new Movie(title,genre);
+                    movieArray = addMovie(movieArray, addMe);
+                    System.out.println("Movie added... Would you like to confirm?");
+                    boolean answer = input.yesNo();
+                    if (answer) {
+                        for (Movie movie : movieArray) {
+                            System.out.println(movie.getName() + " --- " + movie.getCategory());
+                        }
+                        break;
+                    } else {
+                        System.out.println("Restarting...");
+                        break;
+                    }
+                default:
+                    System.out.println("working on it...");
+                    break;
             }
-
         }
     }
 
+    private static Movie[] addMovie(Movie[] movies, Movie movie){
+        movies = Arrays.copyOf(movies, movies.length + 1);
+        movies[movies.length - 1] = movie;
+        return movies;
+    }
+
+    public static void main(String[] args) {
+        movieApp();
+    }
+}

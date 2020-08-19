@@ -6,8 +6,8 @@ public class Movie {
 
     //default constructor
     public Movie() {
-        Movie m = new Movie();
     }
+
     //getter and setter for name
     public String getName() {
         return name;
@@ -25,6 +25,7 @@ public class Movie {
        this.category = category;
     }
 
+    //constructor including name and category
     public Movie(String name, String category){
         this.name = name;
         this.category = category;
