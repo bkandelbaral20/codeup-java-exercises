@@ -16,7 +16,7 @@ public class Input {
     //creating String get String() method
     public String getString() {
         String userInput = "";
-        System.out.println("please type here: ");
+        System.out.println("Please type here: ");
         userInput = scanner.nextLine();
         return userInput;
     }
@@ -54,7 +54,7 @@ public class Input {
     //int getInt()
     public int getInt() {
         System.out.println("Please enter another int number here:");
-       int  num = scanner.nextInt();
+        int num = scanner.nextInt();
         return num;
     }
 
@@ -81,4 +81,9 @@ public class Input {
         num = scanner.nextDouble();
         return num;
     }
+
+    public void clear() {
+        this.scanner.nextLine();
+    }
+
 }
