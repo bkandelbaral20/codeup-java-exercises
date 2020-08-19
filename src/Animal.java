@@ -2,6 +2,7 @@
 public class Animal {
 
     String name;
+    int age;
     public void printName(){
         System.out.println("I am Ani");
     }
@@ -9,6 +10,7 @@ public class Animal {
     public static void main(String[] args) {
         Dog d = new Dog();
         d.printName();
+        d.age = 10;
     }
 }
 
