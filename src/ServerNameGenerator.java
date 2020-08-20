@@ -12,6 +12,7 @@ public class ServerNameGenerator {
 //    Create a method that will return a random element from an array of strings.
 
         System.out.println("Here is your server name :");
+//        we do not have to use class object here because we have static on methods.
         System.out.println(ServerNameGenerator.randomWord(adjectives) + "---" + ServerNameGenerator.randomWord(nouns));
     }
 
