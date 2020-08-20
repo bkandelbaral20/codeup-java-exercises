@@ -51,28 +51,20 @@ public class GradesApplication {
         for (String username : students.keySet()) {
             System.out.print(username + " |  ");
         }
-
-       boolean again = true;
+        Scanner scan = new Scanner(System.in);
+       boolean again = false;
         do {
-            Scanner scan = new Scanner(System.in);
+
             System.out.println(" \n What student would you like to see more information on?");
             String userInput = scan.nextLine(); // either a string, or empty string
+            System.out.println(userInput);
 
-            if (userInput.equalsIgnoreCase("bkandel56") || userInput.equalsIgnoreCase("sanju21") || userInput.equalsIgnoreCase("Bijit91")
-                    || userInput.equalsIgnoreCase("Santosh56")) {
-                again = true;
-            } else {
-                System.out.println("There is no such username: " + userInput + ". Please try again: ");
-                userInput = scan.nextLine();
-            }
-                // ask the user if they would like to continue
-                System.out.print("Would you like to see another student? [y/N]: ");
-                String response = scan.nextLine();
-                if (!response.trim().equalsIgnoreCase("y")) {
-                    again = false;
-                }
-
-        } while (again);
+            if (students.containsKey(userInput)) {
+                Student name = students.get(userInput);
+                System.out.println("Name: " + name + "- GitHub Username: " + userInput);
+                System.out.println("Current Average: " + name.getGradeAverage());
+            } else System.out.print("Sorry, no student found with the GitHub username of \"" + userInput + "\".\n Would you like to see another student?(y/n)\n> ");
+        } while (true);
 
 
     }
