@@ -6,7 +6,8 @@ public class Student {
 
     private String name;
 //    private  String grades;
-    ArrayList<Integer> grades = new ArrayList<>();
+    static private ArrayList<Integer> grades = new ArrayList<>();
+    static private ArrayList<String> grade = new ArrayList<>(Arrays.asList("90,56,78,88,67,99,89"));
 
    // Default constructor
     public Student (){}
@@ -33,6 +34,8 @@ public class Student {
 
     public static void main(String[] args) {
         Student stu = new Student();
+        System.out.println("WElcome ! \n");
+        System.out.println("Here are the GitHub usernames of our students:");
         System.out.println(stu.getName());
         System.out.println(stu.addGrade(90));
     }
