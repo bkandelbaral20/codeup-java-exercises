@@ -11,15 +11,19 @@ public class Student {
    // Default constructor
     public Student (){}
 
-    //constructor
-    public Student(String name, ArrayList<Integer> grades) {
-        this.name = name;
-        this.grades = grades;
-    }
-
-    // returns the student's name
+    //using getter ans setter for name
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    //constructor
+    public Student(String name) {
+        this.name = name;
+        this.grades = grades;
     }
 
     // adds the given grade to the grades property
@@ -28,7 +32,12 @@ public class Student {
         }
 
     // returns the average of the students grades
-//    public double getGradeAverage(){
-//    }
+    public double getGradeAverage() {
+        double total = 0;
+        for (double grade : grades){
+            total += grade++;
+        }
+        return total / grades.size();
+    }
 
 }
