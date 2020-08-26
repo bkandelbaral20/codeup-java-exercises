@@ -78,6 +78,21 @@ public class Array {
         System.out.println(Arrays.toString(locations));
         System.out.println("------------------");
 
+//        Two-dimensional Arrays
+        System.out.println("Using 2-dimensional method to print out individual elements");
+        int[][] numbers = {
+                {2,5,6},
+                {3,5,2},
+                {4,8,1}
+                         };
+//        access the indiviual element using row and column method
+        System.out.println("int[][] numbers = { {2,5,6},\n" + "                   " +
+                " {3,5,2},\n" + "" +
+                "                    {4,8,1} }");
+        System.out.println("numbers[2][1] = " + numbers[2][1]);
+        System.out.println("numbers[0][1] = " + numbers[0][1]);
+        System.out.println("numbers[1][2] = " + numbers[1][2]);
+        System.out.println("numbers[0][0] = " + numbers[0][0]);
 
     }
 
