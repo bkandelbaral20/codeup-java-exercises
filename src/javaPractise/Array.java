@@ -18,7 +18,7 @@ public class Array {
         int[] grades = new int[]{66, 23, 23, 45, 34};
 
         //calculate its total elemnts /size
-        System.out.println("The size of an array is  "+ (myNames.length));
+        System.out.println("The size of an array is  " + (myNames.length));
 
         //for loop iterate all the indexes
         for (int i = 0; i < myNames.length; i++) {
@@ -81,15 +81,15 @@ public class Array {
 //        Two-dimensional Arrays
         System.out.println("Using 2-dimensional method to print out individual elements");
         int[][] numbers = {
-                {2,5,6},
-                {3,5,2},
-                {4,8,1}
-                         };
+                {2, 5, 6},
+                {3, 5, 2},
+                {4, 8, 1}
+        };
 
         System.out.println(" **** using for loop to print out the 2-dimensional array ****");
-        for (int i = 0; i < numbers.length; i++){
+        for (int i = 0; i < numbers.length; i++) {
             System.out.println(Arrays.toString(numbers[i]));
-    }
+        }
         System.out.println("------------------");
 
         System.out.println("Access the indiviual element using row and column method");
