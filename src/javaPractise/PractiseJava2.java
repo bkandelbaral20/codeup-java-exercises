@@ -14,7 +14,10 @@ public String lastName;
     //creating main method to run the code
     public static void main(String[] args) {
 //        creating an instance of an class
-        PractiseJava2 fullname = new PractiseJava2();
-        System.out.println(fullname.sayHello("Binjita","kandel"));
+        PractiseJava2 fullName = new PractiseJava2();
+
+//        we can create different instance of class object, in this senario we can assign another fullname for
+//        another person
+        System.out.println(fullName.sayHello("Binjita","kandel"));
     }
 }
