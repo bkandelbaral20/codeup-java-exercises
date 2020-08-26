@@ -1,4 +1,5 @@
 package javaPractise;
+
 import java.util.Arrays;
 
 
@@ -57,12 +58,28 @@ public class Array {
         System.out.println("Using arrays.copy  method to copy all the previous indies and also add 1 more element");
         int[] newGrades = Arrays.copyOf(grades, 6);
         //assiging value to new index
-        newGrades[5]= 20;
-        for (int h : newGrades){
+        newGrades[5] = 20;
+        for (int h : newGrades) {
             System.out.println(h);
         }
+        System.out.println("\nusing array.tostring method");
+        System.out.println(Arrays.toString(newGrades));
+        System.out.println("------------------");
 
-}
+//        4.Arrays.toString method
+        System.out.println("Returns string representation of an array ");
+        String[] locations = new String[]{"pokhara", "chitwan", "london", "paris", "new York"};
+        System.out.println(Arrays.toString(locations));
+        System.out.println("------------------");
+
+//        4.Arrays.sort(array) method
+        System.out.println("Returning above mentioned array of location into ascending orders");
+        Arrays.sort(locations);
+        System.out.println(Arrays.toString(locations));
+        System.out.println("------------------");
+
+
+    }
 
 
 }
