@@ -2,8 +2,6 @@ package javaPractise;
 
 //Take three numbers from the user and print the greatest number.
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -26,5 +24,10 @@ public class PractiseOne {
             max = Math.max(y,z);
         }
         System.out.println("The max of three numbers is: " + max);
+    }
+
+    //Write a Java program to solve quadratic equations (use if, else if and else).
+    public static double quadraticEquations(double a, double b, double c){
+
     }
 }
