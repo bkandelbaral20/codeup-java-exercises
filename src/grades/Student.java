@@ -4,7 +4,6 @@ package grades;
 public class Student {
 
     private String name;
-//    private  String grades;
      private ArrayList<Integer> grades = new ArrayList<>();
 
    // Default constructor
