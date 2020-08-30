@@ -100,7 +100,7 @@ public class ControlFlowExercises {
             for (int i = 1; i <= userInteger; i++) {
                 System.out.printf("%-6d | %-7d | %-5d%n", i, i * i, i * i * i);
             }
-            System.out.printf("\n\nWould you like to continue (y/n): ");
+            System.out.println("\n\nWould you like to continue (y/n): ");
             userResponse = scanner.next();
         } while (userResponse.equals("y"));
     }

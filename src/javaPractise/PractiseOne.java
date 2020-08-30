@@ -27,7 +27,7 @@ public class PractiseOne {
     }
 
     //Write a Java program to solve quadratic equations (use if, else if and else).
-    public static double quadraticEquations(double a, double b, double c){
-
-    }
+//    public static double quadraticEquations(double a, double b, double c){
+//
+//    }
 }
