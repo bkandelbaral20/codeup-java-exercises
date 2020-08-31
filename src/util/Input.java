@@ -23,41 +23,43 @@ public class Input {
     }
 
     //boolean yesNo() method
-//    public boolean yesNo() {
-//        System.out.println("Please enter the Yes or No here:");
-//        String userInput1 = scanner.next();
-//        if (userInput1.equalsIgnoreCase("yes") || userInput1.equalsIgnoreCase("y")) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
+    public boolean yesNo() {
+        System.out.println("Please enter the Yes or No here:");
+        String userInput1 = scanner.next();
+        if (userInput1.equalsIgnoreCase("yes") || userInput1.equalsIgnoreCase("y")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     //int getInt(int min, int max) method
-//    public int getInt(int min, int max)  {
-//
-//        try {
-//            // i.e. see if number is between 1 and 10
-//            System.out.println("please enter a int number here between 1 - 10 :");
-//            boolean doAgain = true;
-//            int num = 0;
-//            do {
-////                num = scanner.nextInt();
-//                num = Integer.valueOf(getString());
-//                if (num < min || num > max) {
-//                    System.out.printf("\nThe integer %d is out of range\n", num);
-//                    System.out.printf("Enter an integer between %d and %d: ", min, max);
-//                } else {
-//                    doAgain = false; // they did enter a number within range, so break while
-//                }
-//            } while (doAgain); // if we get a correct number (1 < x < 10), break out of while
-//            return num;
-//
-//        } catch (NumberFormatException e) {
-//            System.out.println("Something went wrong.");
-//        }
-//        return min;
-//    }
+    public int getInt(int min, int max)  {
+            // i.e. see if number is between 1 and 10
+
+        try {
+            System.out.println("please enter a int number here between 1 - 10 :");
+            boolean doAgain = true;
+            int num = 0;
+            do {
+//                num = scanner.nextInt();
+                num = Integer.valueOf(getString());
+
+                    if (num < min || num > max) {
+                        System.out.printf("\nThe integer %d is out of range\n", num);
+                        System.out.printf("Enter an integer between %d and %d: ", min, max);
+                    } else {
+                        doAgain = false; // they did enter a number within range, so break while
+                    }
+                } while (doAgain) ; // if we get a correct number (1 < x < 10), break out of while
+                return num;
+
+            }
+        catch (NumberFormatException e) {
+            System.out.println("Something went wrong.");
+        }
+        return min;
+    }
 
         //int getInt()
         public int getInt () {

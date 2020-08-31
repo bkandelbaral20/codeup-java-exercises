@@ -1,17 +1,41 @@
 package javaPractise;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
 public class Array {
+
+     static String name;
     public static void main(String[] args) {
         //initializing the array having 3 elements
 
-        int[] newArray = new int[3];
+        String name2;
+
+
+        System.out.println("name = " + name);
+        //I'm at Wyndham LaSystem.out.println("name = " + name2);
+
+
+        String[] newArray = new String[]{"Santosh", "Binju"};
+        System.out.println(newArray.length);
+
+        ArrayList<String> myAl = new ArrayList<>();
+        myAl.add("Santosh");
+        myAl.add("Binju");
+        System.out.println(myAl.size());
+        System.out.println(myAl.get(0));
+        for(String s : myAl){
+            System.out.println(s);
+        }
+
+
         System.out.println(newArray[0]);
         System.out.println(newArray[1]);
         System.out.println(newArray[2]);
         System.out.println("---------------");
+
+
 
 //        initializing array size and elements
         String[] myNames = new String[]{"bin", "jita", "rita", "gita"};

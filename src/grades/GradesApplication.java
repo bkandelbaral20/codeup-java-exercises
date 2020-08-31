@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class GradesApplication {
     public static void main(String[] args) {
 
-        System.out.println(" Welcome ! \n");
+        System.out.println(" Welcome !");
         System.out.println(" Here are the GitHub usernames of our students:");
 
         HashMap<String, Student> students = new HashMap<>();
@@ -36,8 +36,8 @@ public class GradesApplication {
 
 
         //student Github usernames
-        students.put("bkandel56", student1);
-        students.put("sanju21", student2);
+        students.put("Sanju21", student1);
+        students.put("bkandel56", student2);
         students.put("Bijit91", student3);
         students.put("Santosh56", student4);
 
@@ -50,13 +50,13 @@ public class GradesApplication {
         for (String username : students.keySet()) {
             System.out.print(username + " |  ");
         }
+
         Scanner scan = new Scanner(System.in);
-       boolean again = false;
+        boolean again = false;
         do {
 
             System.out.println(" \n What student would you like to see more information on?");
             String userInput = scan.nextLine(); // either a string, or empty string
-            System.out.println(userInput);
 
             if (students.containsKey(userInput)) {
                 Student name = students.get(userInput);
@@ -64,7 +64,8 @@ public class GradesApplication {
                 System.out.println("Current Average: " + name.getGradeAverage());
             } else System.out.print("Sorry, no student found with the GitHub username of \"" + userInput + "\".\n" +
                     " Would you like to see another student?(y/n)\n> ");
-        } while(again = true);
+        }
+        while (again = true);
     }
 }
 
