@@ -1,6 +1,6 @@
 package grades;
-import util.Input;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //Create a grocery list command line application. You will use your input class from previous exercises.
@@ -26,17 +26,33 @@ import java.util.Scanner;
 
 public class GroceryList {
     public static void main(String[] args) {
-        Input in = new Input();
-        System.out.println("Would you like to create grocery list");
+        //Arrays.asList will print out all the element
+        GroceryList gl = new GroceryList();
+        System.out.println("Would you like to create the grocery lists:");
         Scanner scan = new Scanner(System.in);
         String YN = scan.nextLine();
         if(YN.equalsIgnoreCase("y")){
+            ArrayList<String> groceries = new ArrayList<>();
+            groceries.add("Apple");
+            groceries.add("Salt");
+            groceries.add("Rice");
+            groceries.add("Soft drinks");
+            groceries.add("Milk");
+            groceries.add("Veggies");
+            System.out.println(groceries);
             System.out.println("Would you like to enter a new item");
             if(YN.equalsIgnoreCase("y")){
-                System.out.println("Given an ordered list of grocery categories to choose from, select the category.");
-                System.out.println("Enter name of the item.");
-                System.out.println("Enter how many of the item.");
+                String newList = scan.nextLine();
+                groceries.add(newList);
+                System.out.println(groceries);
+
+//                System.out.println("Given an ordered list of grocery categories to choose from, select the category.");
+//                System.out.println("Enter name of the item.");
+//                System.out.println("Enter how many of the item.");
             }
         }
+
     }
+
+
 }
