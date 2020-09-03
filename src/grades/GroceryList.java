@@ -40,7 +40,12 @@ public class GroceryList {
             groceries.add("Milk");
             groceries.add("Veggies");
             System.out.println(groceries);
+            //adding
+            boolean doAgain = false;
             System.out.println("Would you like to enter a new item");
+           String yesNO = scan.nextLine();
+            if(yesNO.equalsIgnoreCase("y")){
+            do{
             if(YN.equalsIgnoreCase("y")){
                 String newList = scan.nextLine();
                 groceries.add(newList);
@@ -50,9 +55,21 @@ public class GroceryList {
 //                System.out.println("Enter name of the item.");
 //                System.out.println("Enter how many of the item.");
             }
-        }
+        }while(gl.addingItem(scan));
 
-    }
+    }else{
 
+            }
+            }
+}
 
+        public boolean addingItem (Scanner scan){
+            System.out.println("Would you like to enter another item");
+            String extra = scan.nextLine();
+            if(extra.equalsIgnoreCase("yes")){
+                return true;
+            }else{
+                return false;
+            }
+            }
 }
